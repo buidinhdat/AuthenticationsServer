@@ -39,4 +39,29 @@ public class TestController {
         s.put("old","25");
         return new ResponseEntity<Map>(s, HttpStatus.OK);
     }
+
+
+
+
+    public static void main(String []args){
+        String x="{";
+//{/home/test2,/home/test}
+        for(int i=0;i<10000;i++){
+
+            x+="/home/test"+String.valueOf(i)+",";
+            /*x+= " @RequestMapping(value = {\"/test"+String.valueOf(i)+"\"}, method = RequestMethod.GET)\n" +
+                    "    public ResponseEntity<?> getTest"+String.valueOf(i)+"() {\n" +
+                    "        Map s= new HashMap();\n" +
+                    "        s.put(\"name\",\"Quỳnh\");\n" +
+                    "        s.put(\"old\",\"25\");\n" +
+                    "        s.put(\"api_num\",\""+String.valueOf(i)+"\");\n" +
+                    "        return new ResponseEntity<Map>(s, HttpStatus.OK);\n" +
+                    "    } \n\n";*/
+
+            }
+        System.out.println(x+"}");
+    }
+
+
+
 }
